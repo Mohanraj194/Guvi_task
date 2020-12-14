@@ -1,0 +1,21 @@
+Copy By Value : 
+                In Copy by value the data which variable hold is passed to another variable .
+                Both the variables refers two different memory locations.
+
+                example: var a= 10
+                     var b= a
+                     console.log(a,b) //ans 10 10
+                     b=80
+                    console.log(a,b) //ans 10 80
+
+
+Copy by reference :
+                For composite data types objects are copied by reference.
+                Actual variable and copied variable both refer to same memory location .
+                SO change in data of copied variable will lead to change in data of original variable too.
+
+                example: var a= [1,2,3]
+                     var b= a
+                     console.log(a,b) //ans [1,2,3] [1,2,3]
+                     b[2]=80
+                    console.log(a,b) //ans [1,2,80] [1,2,80]

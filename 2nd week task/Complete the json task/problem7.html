@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+<script>
+var expected = {foo: 5, bar: 6};
+var actual = {foo: 5, bar: 6}
+function assertObjectsEqual(actual, expected, testName){
+ 
+ if(JSON.stringify(expected)===JSON.stringify(actual)){
+   return "Passed"
+ }
+ else{
+   return "FAILED"
+ }
+}
+
+   console.log(assertObjectsEqual(actual, expected, 'detects that two objects are equal'))
+</script>
+    </body>
+</html>

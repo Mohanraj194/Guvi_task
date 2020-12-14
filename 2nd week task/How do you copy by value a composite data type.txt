@@ -1,0 +1,42 @@
+There are 3 ways to copy by value for composite data types.
+          i)   Using the spread (...) operator
+         ii)   Using the Object.assign() method
+        iii)   Using the JSON.stringify() and JSON.parse() methods
+
+i) Using Spread :
+            Spread operator allows an iterable to expand in places where 0+ arguments are expected.
+            It is mostly used in the variable array where there is more than 1 values are expected.
+            It allows us the privilege to obtain a list of parameters from an array.Using spread will clone your object.
+            Note this will be a shallow copy.    
+
+            example: var a= [1,2,3]
+                     var b= [...a]
+                     console.log(a,b) //ans [1,2,3] [1,2,3]
+                     b[2]=80
+                    console.log(a,b) //ans [1,2,3] [1,2,80]
+
+ii) Using Object.assign() :  
+
+            The Object.assign() method copies all enumerable own properties from one or more source objects to a target object.
+            It returns the target object. Note this will be a shallow copy.
+
+            example: var a= [1,2,3]
+                     var b= Object.assign([],a)
+                     console.log(a,b) //ans [1,2,3] [1,2,3]
+                     b[2]=80
+                    console.log(a,b) //ans [1,2,3] [1,2,80]
+
+3. Using JSON.parse() and JSON.stringify() :
+
+            The JSON object, available in all modern browsers, has two useful methods to deal with JSON-formatted content: parse and stringify.
+            JSON.parse() takes a JSON string and transforms it into a JavaScript object.
+            JSON.stringify() takes a JavaScript object and transforms it into a JSON string.
+            Using JSON.parse() and JSON.stringify() for copy performs deep copy . The deep copy is a true copy for nested objects.
+            Shallow copy copies only reference in case of nested objects.
+
+            example: var a= [1,2,3]
+                     var b= JSON.parse(JSON.stringify(a))
+                     console.log(a,b) //ans [1,2,3] [1,2,3]
+                     b[2]=80
+                    console.log(a,b) //ans [1,2,3] [1,2,80]
+            

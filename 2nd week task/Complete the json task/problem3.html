@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+<script>
+    var obj = {name: "ISRO", age: 35, role: "Scientist"};
+function convertListToObject(obj) {
+
+var obbj=[]
+var final =[]
+    for(ans in obj)
+    {
+        obbj.push(ans)
+        obbj.push(obj[ans])
+        final.push(obbj)
+        obbj=[]
+
+    }
+    return final
+
+}
+
+   console.log(convertListToObject(obj))
+</script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+    <head></head>
+    <body>
+<script>
+    var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+ ]
+}
+// 1. Add height and weight to Fluffy
+cat["height"]=50
+cat["weight"]=10
+console.log("Add height and weight : height -"+cat["height"]+ " weight - "+cat["weight"])
+
+//2.Fluffy name is spelled wrongly. Update it to Fluffyy
+
+cat["name"]="Fluffyy"
+console.log("Update it to Fluffyy:"+cat["name"])
+
+//3. List all the activities of Fluffyy’s catFriends.
+
+
+ var act=""
+for(i=0;i<cat["catFriends"].length;i++)
+{
+     act += cat['catFriends'][i]['activities']+','
+}
+console.log("Fluffyy friends activity : "+ act.slice(0, -1))
+
+//4. Print the catFriends names.
+
+var frdnm= ""
+for(i=0;i<cat["catFriends"].length;i++)
+{
+    frdnm += cat['catFriends'][i]['name']+" "
+}
+console.log("Fluffyy friends name : "+ frdnm)
+
+//5. Print the total weight of catFriends
+
+var totalweight =0
+for(i=0;i<cat["catFriends"].length;i++)
+{
+    totalweight += cat['catFriends'][i]['weight']
+}
+console.log("Fluffyy friends total weight : "+ totalweight)
+
+//6. Print the total activities of all cats (op:6)
+
+var count=cat['activities'].length
+for(i=0;i<cat["catFriends"].length;i++)
+{
+    count+=cat['catFriends'][i]['activities'].length 
+} 
+console.log("total count of activities: "+count)
+
+//7. Add 2 more activities to bar & foo cats
+
+var neactiv = ["play","work"]
+for(actv=0;actv<neactiv.length;actv++)
+{
+    cat['catFriends'][actv]['activities'].push(neactiv[0])
+    cat['catFriends'][actv]['activities'].push(neactiv[1])
+} 
+console.log("new 2 activity for fluffly friend bar: "+cat['catFriends'][0]['activities'])
+console.log("new 2 activity for fluffly friend foo: "+cat['catFriends'][1]['activities'])
+
+// 8.Update the fur color of bar
+
+
+
+for(clr=0;clr<cat['catFriends'].length;clr++)
+{
+   
+    if(cat['catFriends'][clr]['name']==="bar")
+    {
+        cat['catFriends'][clr]['furcolor']="black" 
+    }
+}
+console.log("bar color changed as: "+cat['catFriends'][0]['furcolor'])
+ 
+ console.log(cat)
+</script>
+    </body>
+</html>
