@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program 10-20</title>
+    <style>
+        p {
+            font-size: 1.25em;
+            width: 15%;
+            margin: 0 auto;
+        }
+        p::first-letter {
+            float: left;
+            font-size: 5em;
+            margin: -17px 0 0 0;
+        }
+        .reshape{
+            background-color: lightblue;
+            width: 150px;
+            height: 100px;
+            border-radius:40px 0px 40px  0px;
+            margin: 0 auto;
+        }
+        .background-img{
+            background-image: url('https://www.guvi.in/images/guvi-logo.png');
+            width: 100%;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #main {
+        width: 400px;
+        height: 100px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: row-reverse;
+        }
+
+        #main div {
+        width: 50px;
+        height: 50px;
+        }
+        .round-corner{
+            background-color: lightblue;
+            width: 150px;
+            height: 100px;
+            border-radius:0px 0px 0px  25px;
+            margin: 0 auto;
+        }
+        .rm-opc{
+            opacity: 0.1;
+        }
+        .rm-opc:hover{
+            opacity: 1;
+        }
+        .scrollbar{
+            width: 110px;
+            height: 110px;
+            overflow: scroll;
+        }
+        .linear-gradient{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(white,red, blue,green);
+        }
+        .rotate{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            transform: rotate(45deg)
+        }
+        .bdrimg{
+            width: 200px;
+            background-color: #ffa;
+            border: 36px solid orange;
+            margin: 30px;
+            padding: 10px;
+            border-image:url("https://mdn.mozillademos.org/files/4127/border.png");
+            border-image-slice: 30;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>10.Design the below image using HTML & CSS.</h1>
+        <p>Drop caps can be used to add emphasis to blocks of text but know they can affect readability</p>
+    </section>
+
+    <section>
+        <h1>11.Use the required property to reshape a div, as example shown below.</h1>
+        <div class="reshape">
+
+        </div>
+    </section>
+
+    <section>
+        <h1>12. Use CSS to set a background image should be centered and should not repeat.</h1>
+        <div class="background-img">
+            
+        </div>
+    </section>
+    <section>
+        <h1>13. Write CSS rules to set the direction of the flexible items inside the div element in reverse order.</h1>
+        <div id="main">
+            <div style="background-color:coral;">A</div>
+            <div style="background-color:lightblue;">B</div>
+            <div style="background-color:khaki;">C</div>
+            <div style="background-color:pink;">D</div>
+            <div style="background-color:lightgrey;">E</div>
+            <div style="background-color:lightgreen;">F</div>
+          </div>
+        <span>display: flex;
+            flex-direction: row-reverse;</span>
+    </section>
+    
+
+    <section>
+        <h1>14. Give the div element an image border using the image "border.png". Slice the image at 30px and stretch it</h1>
+        <div class="bdrimg">
+            
+        </div>
+    </section>
+
+    <section>
+        <h1>15. Give the div element a rounded corner (25px radius) on the bottom left side.</h1>
+        <div class="round-corner">
+
+        </div>
+    </section>
+
+    <section>
+        <h1>16. Remove the transparency/opacity of the img element when the user hovers over it with the mouse pointer.</h1>
+        <div>
+            <img class="rm-opc" src="https://camo.githubusercontent.com/da092347de875d0327cd7419f20b2af6866b43deafeeddd038e7428b0938ad13/68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e253341414e6439476352315775514c486a616f71464c5142564a54506d71564736576649774b326a447866315241796343514a4a6875686a69743626757371703d434155">
+        </div>
+    </section>
+
+    <section>
+        <h1>17. Position the div element all the way to the right using absolute positioning.</h1>
+        <div style="position:relative;">
+                <span style="position: absolute;top: 10px;right: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus a error natus ipsa ipsum iste nesciunt.</span>
+
+        </div>
+    </section>
+
+    <section>
+        <h1>18. Add a scrollbar to the div element.</h1>
+        <div class="scrollbar">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt cupiditate ducimus nulla?<br>
+                 Rem corporis ut fugiat ab dignissimos non harum, inventore, tenetur ipsum mollitia suscipit, voluptates ipsam aliquid eum.<br>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt cupiditate ducimus nulla?<br>
+                 Rem corporis ut fugiat ab dignissimos non harum, inventore, tenetur ipsum mollitia suscipit, voluptates ipsam aliquid eum.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt cupiditate ducimus nulla? Rem corporis ut fugiat ab dignissimos non harum, inventore, tenetur ipsum mollitia suscipit, voluptates ipsam aliquid eum.</span>
+        </div>
+    </section>
+
+    <section>
+        <h1>19. Set a linear gradient background for the div element, going from the top to bottom, transitioning from "white" to "red" to "blue" to "green".</h1>
+        <div class="linear-gradient">
+
+        </div>
+    </section>
+
+    <section>
+        <h1>20. With the transform property, rotate the div element 45 degrees.</h1>
+        <div class="rotate">
+
+        </div>
+    </section>
+</body>
+</html>

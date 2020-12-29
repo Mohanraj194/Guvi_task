@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program 2 to 8</title>
+
+    <style>
+        .bdr-radius{
+            border-radius: 10px; 
+        }
+        .bg-green{
+            background-color: green;
+            width: 250px;
+            height: 250px;
+        }
+        .bg-dashed{
+            border-style: dashed;
+            width: 250px;
+            height: 250px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        section>div>div{
+            margin: 5px;
+        }
+        img {
+        filter: grayscale(100%);
+        }
+        .d-flex{
+         display: flex;
+        }
+        @media only screen and (max-width: 600px) {
+            body {
+                 font-size: 15px;
+                 }
+        }
+        /* cursor */
+        .alias {cursor: alias;}
+        .all-scroll {cursor: all-scroll;}
+        .auto {cursor: auto;}
+        .cell {cursor: cell;}
+        .context-menu {cursor: context-menu;}
+        .col-resize {cursor: col-resize;}
+        .copy {cursor: copy;}
+        .crosshair {cursor: crosshair;}
+        .default {cursor: default;}
+        .e-resize {cursor: e-resize;}
+        .ew-resize {cursor: ew-resize;}
+        .grab {cursor: -webkit-grab; cursor: grab;}
+        .grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+        .help {cursor: help;}
+        .move {cursor: move;}
+        .n-resize {cursor: n-resize;}
+        .ne-resize {cursor: ne-resize;}
+        .nesw-resize {cursor: nesw-resize;}
+        .ns-resize {cursor: ns-resize;}
+        .nw-resize {cursor: nw-resize;}
+        .nwse-resize {cursor: nwse-resize;}
+        .no-drop {cursor: no-drop;}
+        .none {cursor: none;}
+        .not-allowed {cursor: not-allowed;}
+        .pointer {cursor: pointer;}
+        .progress {cursor: progress;}
+        .row-resize {cursor: row-resize;}
+        .s-resize {cursor: s-resize;}
+        .se-resize {cursor: se-resize;}
+        .sw-resize {cursor: sw-resize;}
+        .text {cursor: text;}
+        .url {cursor: url(myBall.cur),auto;}
+        .w-resize {cursor: w-resize;}
+        .wait {cursor: wait;}
+        .zoom-in {cursor: zoom-in;}
+        .zoom-out {cursor: zoom-out;}
+
+        .box-mod{
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+        span:hover {
+        color:green;
+        font-size: 20px;
+        font-family:  monospace;
+        }
+        .d-translate{
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            transform: translate(50px,20px);
+           
+        }
+
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid black;
+        }
+
+        .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        }
+
+        .tooltip:hover .tooltiptext {
+        visibility: visible;
+        }
+    </style>
+</head>
+<body>
+        <section >
+            <h2>2. Write a css rule of rounded rectangle, dashed border, grayscale for all image tags in your webpage.</h2>
+            <div class="d-flex">
+                <div class="bg-green bdr-radius text-center">
+                    rounded rectangle <br>
+                    border-radius: 10px; 
+                </div>
+                <div class="bg-dashed text-center">
+                    dashed border <br>
+                    border-style: dashed;
+                </div>
+                <div class=" text-center">
+                    <img src="https://www.guvi.in/images/guvi-logo.png" >
+                    img
+                    {
+                     filter: grayscale(100%);
+                    }
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Write a media rule to change only the font size of web page when it's resized</h2>
+            <div class="d-flex">
+                <div>
+                    @media only screen and (max-width: 600px) {
+                        body {
+                          font-size: 25px;
+                        }
+                      }
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4.Use HTML & CSS to display different types of cursors</h2>
+            <div class="" >
+                <div>
+                    <p class="alias">alias</p>
+                    <p class="all-scroll">all-scroll</p>
+                    <p class="auto">auto</p>
+                    <p class="cell">cell</p>
+                    <p class="context-menu">context-menu</p>
+                    <p class="col-resize">col-resize</p>
+                    <p class="copy">copy</p>
+                    <p class="crosshair">crosshair</p>
+                    <p class="default">default</p>
+                    <p class="e-resize">e-resize</p>
+                    <p class="ew-resize">ew-resize</p>
+                    <p class="grab">grab</p>
+                    <p class="grabbing">grabbing</p>
+                    <p class="help">help</p>
+                    <p class="move">move</p>
+                    <p class="n-resize">n-resize</p>
+                    <p class="ne-resize">ne-resize</p>
+                    <p class="nesw-resize">nesw-resize</p>
+                    <p class="ns-resize">ns-resize</p>
+                    <p class="nw-resize">nw-resize</p>
+                    <p class="nwse-resize">nwse-resize</p>
+                    <p class="no-drop">no-drop</p>
+                    <p class="none">none</p>
+                    <p class="not-allowed">not-allowed</p>
+                    <p class="pointer">pointer</p>
+                    <p class="progress">progress</p>
+                    <p class="row-resize">row-resize</p>
+                    <p class="s-resize">s-resize</p>
+                    <p class="se-resize">se-resize</p>
+                    <p class="sw-resize">sw-resize</p>
+                    <p class="text">text</p>
+                    <p class="url">url</p>
+                    <p class="w-resize">w-resize</p>
+                    <p class="wait">wait</p>
+                    <p class="zoom-in">zoom-in</p>
+                    <p class="zoom-out">zoom-out</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Write a CSS class that meets the Box Model requirement for all the div tags in your page.</h2>
+            <div class="d-flex">
+                <div class="box-mod">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium expedita sed debitis illum. 
+                    Praesentium quam aperiam, accusantium impedit vitae in quidem voluptatum labore
+                     voluptates nulla nihil rem, veritatis neque! Fugiat?
+                </div>
+                <div class="box-mod">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium expedita sed debitis illum. 
+                    Praesentium quam aperiam, accusantium impedit vitae in quidem voluptatum labore
+                     voluptates nulla nihil rem, veritatis neque! Fugiat?
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Write a CSS class to change size of font, color font family when mouse moves over of span tag in your webpage.</h2>
+            <div class="d-flex">
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Explicabo autem delectus fuga culpa. Nesciunt, vel aut. Asperiores soluta harum et corrupti similique porro nihil necessitatibus nam eaque minima? Vitae, animi.</span>
+            </div>
+        </section>
+        <section>
+            <h2>7. Write a CSS 2D rule with translate() property to move an element.</h2>
+            <div class="d-flex">
+                <div class="d-translate">
+                    This div element is moved 50 pixels to the right, and 20 pixels down from its current position.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>8. Define a CSS class to show tooltip when mouse moved over the elements.</h2>
+            <div class="d-flex">
+                <div class="tooltip">Hover over me to test tooltip
+                    <span class="tooltiptext">guvi greek</span>
+                  </div>
+            </div>
+        </section>
+</body>
+</html>
