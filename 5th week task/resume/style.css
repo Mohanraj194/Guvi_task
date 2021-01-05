@@ -1,0 +1,162 @@
+body
+{
+padding:0px;
+margin:0px;
+background: #ccc;
+}
+.m-0{
+    margin: 0;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+.range-main{
+    position: relative;
+    float: right;
+}
+.range{
+    -webkit-appearance:none ;
+    height: 7px;
+    width: 200px;
+    outline: none;
+    background-color: #cccccc63;
+    overflow: hidden;
+}
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+.range::-moz-range-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+.selector{
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    bottom: -2px;
+    transform: translateX(-50%);
+    z-index: 2;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background: white;
+}
+.prograsive{
+    height: 7px;
+    background-color: #e9b83f; 
+    position: absolute;
+    top: 2;
+    left: 0;
+}
+
+
+.fl span{
+    float: left;
+    
+}
+
+input:focus{
+   outline: none;
+}
+.profile-img{
+    display: inline-block;
+    border: 3px dotted #e9b83f;
+    border-radius: 90px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.profile-img img{
+    height: 170px;
+}
+.wd100
+{
+width:100%;
+}
+.wd50
+{
+width:48%;
+}
+.pdy{
+padding-top:5px;
+padding-bottom:5px;
+border-bottom : 2px solid #ccc;
+}
+.text_center
+{
+text-align:center;
+}
+h2{
+    color:#555555;
+    padding-left:10px;
+}
+.bdr
+{
+border-right : 2px solid #ccc;
+}
+.title-div{
+    display: flex;
+    align-items: center;
+}
+.icon-main-div{
+    width: 40px;
+    height: 40px;
+    border: 4px dotted #e9b83f;
+    border-radius: 41px;
+    overflow: hidden;
+}
+.icon-bg-div{
+    background-color: #565656;
+    height: inherit;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #e9b83f;
+}
+.mrglr
+{
+margin-left:25px;
+margin-right:25px;
+margin-top:15px;
+margin-bottom:15px;
+}
+.h1{
+    width: 370px;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    border-radius: 10px;
+    font-size: revert;
+    margin: -15px auto;
+    background-color: #e9b83f;
+    overflow: overlay;
+    position: relative;
+}
+.container 
+{
+width:1000px;
+margin:auto;
+background: white;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:60px;
+margin-top: -14px;
+}
+.container1
+{
+width:1040px;
+margin:auto;
+background: white;
+margin-bottom: -13px;
+}
