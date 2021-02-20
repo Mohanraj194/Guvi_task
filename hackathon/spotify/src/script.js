@@ -27,7 +27,7 @@ let user_id="";
 if(access_token.length>0)
 {
     setTimeout(()=>{
-        location.replace(`https://sahilalam.github.io/SpotifyPlaylist/`);
+        location.replace(`https://mohanraj194.github.io/Guvi_task/hackathon/spotify/`);
     },3600000);
     document.getElementById('wait').hidden=true;
     document.getElementById('login').hidden=true;
@@ -52,7 +52,7 @@ if(access_token.length>0)
 }
 else
 {
-    let redirect_uri="https://sahilalam.github.io/SpotifyPlaylist/";
+    let redirect_uri="https://mohanraj194.github.io/Guvi_task/hackathon/spotify/";
     let scope="user-read-playback-position user-read-private user-read-email user-library-read user-library-modify user-top-read playlist-read-collaborative playlist-modify-public playlist-modify-private ugc-image-upload user-follow-read user-follow-modify user-read-playback-state user-modify-playback-state user-read-currently-playing user-read-recently-played";
     redirect_uri=encodeURIComponent(redirect_uri);
     scope=encodeURIComponent(scope);
