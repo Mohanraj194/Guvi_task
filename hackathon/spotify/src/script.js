@@ -6,9 +6,9 @@ import search from "./search.js";
 
 let access_token="";
 let query=[...window.location.href];
-if(query[44]=='#')
-{
-    query[44]='?';
+if(query[position]=='#')
+{//alert("hai")
+    query[position]='?';
     query=query.join('');
     location.replace(query);
 }
