@@ -3,6 +3,7 @@ const correctLetters = [];
 const wrongLetters = [];
 let winnings=0
 let figureParts = 0
+const alphabet = "abcdefghijklmnopqrstuvwxyz"
 let h1= document.createElement("h1")
 h1.innerHTML=`Hangman Game`
 
@@ -10,8 +11,9 @@ let container	= document.createElement('div')
 container.setAttribute("class","container")
 let row1 = document.createElement("div")
 row1.setAttribute("class","row text-center")
+
 row1.innerHTML=`
-<div class="d-flex m-auto">
+<div class="d-flex m-auto" style="flex-wrap: wrap;justify-content: center;">
   <div class="first_row">
   No of Correct Letters<br/>  ${correctLetters.length}
   </div>
@@ -57,6 +59,15 @@ let wrngLet= document.createElement("div")
 wrngLet.setAttribute("id","wrong-letters")
 
 
+
+let alphRow = document.createElement('div')
+alphRow.id='alphrow'
+alphRow.setAttribute("class","row d-sm-block d-md-none")
+
+let alphCol_4 = document.createElement("div")
+alphCol_4.setAttribute("class","col-md-4")
+alphCol_4.innerHTML=`${alphabet.split("").map(element=> `<button type="button" class="btn btn-secondary" onclick=workcheck('${element}')>${element}</button>`).join('')}`
+
 let popContainer = document.createElement("div")
 popContainer.setAttribute("class","popup-container")
 popContainer.id="popup-container"
@@ -79,6 +90,7 @@ notificationContent.id="notification-container"
 notificationContent.setAttribute("class","notification-container")
 notificationContent.innerHTML=`<p>You have already entered this letter</p>`
 
+alphRow.append(alphCol_4)
 popContainerdiv.append(popupH2,popupH3,popupButton)
 popContainer.append(popContainerdiv)
 wrngLetCon.append(wrngLet)
@@ -87,7 +99,7 @@ col_5_1.append(img,worddiv)
 insCol_7Row.append(col_5_2,col_5_1)
 col_7.append(insCol_7Row)
 row.append(col_7)
-container.append(row1,row)
+container.append(row1,row,alphRow)
 
 
 container.style.display="none";
@@ -147,7 +159,7 @@ function displayWord() {
 			)
 			.join('')}
   `;
-  row1.innerHTML=`<div class="d-flex m-auto">
+  row1.innerHTML=`<div class="d-flex m-auto" style="flex-wrap: wrap;justify-content: center;">
   <div class="first_row">
   No of Correct Letters<br/>  ${correctLetters.length}
   </div>
@@ -178,7 +190,7 @@ function updateWrongLettersEl() {
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
   `;
 
-  row1.innerHTML=`<div class="d-flex m-auto">
+  row1.innerHTML=`<div class="d-flex m-auto" style="flex-wrap: wrap;justify-content: center;">
   <div class="first_row">
   No of Correct Letters<br/>  ${correctLetters.length}
   </div>
@@ -214,7 +226,7 @@ function showNotification() {
 
 
 window.addEventListener('keydown', e => {
-	debugger
+	//debugger
 	if (playable) {
 		if (e.keyCode >= 65 && e.keyCode <= 90) {
 			const letter = e.key.toLowerCase();
@@ -239,6 +251,34 @@ window.addEventListener('keydown', e => {
 		}
 	}
 });
+
+
+let workcheck=(e)=>{
+	//debugger
+	if (playable) {
+		
+			const letter = e;
+
+			if (selectedWord.includes(letter)) {
+				if (!correctLetters.includes(letter)) {
+					correctLetters.push(letter);
+
+					displayWord();
+				} else {
+					showNotification();
+				}
+			} else {
+				if (!wrongLetters.includes(letter)) {
+					wrongLetters.push(letter);
+
+					updateWrongLettersEl();
+				} else {
+					showNotification();
+				}
+			}
+		
+	}
+}
 
 
 playAgainBtn.addEventListener('click', () => {
@@ -268,4 +308,6 @@ playAgainBtn.addEventListener('click', () => {
 	document.getElementById("hangimg").src=`img/Hangman-0.png`
 	popup.style.display = 'none';
 });
+
+
 
