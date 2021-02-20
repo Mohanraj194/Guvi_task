@@ -217,10 +217,10 @@ function updateWrongLettersEl() {
 
 
 function showNotification() {
-	notification.classList.add('show');
+	notification.style.display='flex'
 
 	setTimeout(() => {
-		notification.classList.remove('show');
+		notification.style.display='none'
 	}, 2000);
 }
 
@@ -308,6 +308,4 @@ playAgainBtn.addEventListener('click', () => {
 	document.getElementById("hangimg").src=`img/Hangman-0.png`
 	popup.style.display = 'none';
 });
-
-
 
