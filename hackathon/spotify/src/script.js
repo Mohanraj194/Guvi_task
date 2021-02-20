@@ -6,6 +6,8 @@ import search from "./search.js";
 
 let access_token="";
 let query=[...window.location.href];
+let str =[...window.location.href];
+let position = str.indexOf("#");
 if(query[position]=='#')
 {//alert("hai")
     query[position]='?';
