@@ -62,7 +62,7 @@ wrngLet.setAttribute("id","wrong-letters")
 
 let alphRow = document.createElement('div')
 alphRow.id='alphrow'
-alphRow.setAttribute("class","row d-sm-block d-md-none")
+alphRow.setAttribute("class","row my-2 d-sm-block d-md-none")
 
 let alphCol_4 = document.createElement("div")
 alphCol_4.setAttribute("class","col-md-4")
